@@ -1,13 +1,264 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: 'fontello';
+  src: url('font/fontello.eot?6039600');
+  src: url('font/fontello.eot?6039600#iefix') format('embedded-opentype'),
+       url('font/fontello.woff?6039600') format('woff'),
+       url('font/fontello.ttf?6039600') format('truetype'),
+       url('font/fontello.svg?6039600#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+
+  /* remove if not needed */
+
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+
+  /* font-size: 120%; */
+
+  /* Font smoothing. That was taken from TWBS */
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+
+}
+.icon-lightbulb:before {
+  content: '\e800';
+}
+/* '' */
+.icon-comment-empty:before {
+  content: '\e801';
+}
+/* '' */
+.icon-facebook:before {
+  content: '\e802';
+}
+/* '' */
+.icon-twitter:before {
+  content: '\e803';
+}
+/* '' */
+.icon-cancel:before {
+  content: '\e804';
+}
+/* '' */
+.open-sans {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 0.24rem;
+  text-transform: uppercase;
+  line-height: 1.35;
+  font-weight: 400;
+}
+/* Resets */
+html {
+  font-size: 62.5%;
+}
+html,
+body,
+header,
+footer,
+aside,
+section,
+div,
+span,
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  padding: 10rem 0;
+}
+body h1 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 0.24rem;
+  text-transform: uppercase;
+  line-height: 1.35;
+  font-weight: 400;
+  text-align: center;
+}
+body h2 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 0.24rem;
+  text-transform: uppercase;
+  line-height: 1.35;
+  font-weight: 400;
+  text-align: center;
+  color: #aaa;
+  letter-spacing: 0.48rem;
+  font-size: 1.2rem;
+  margin-top: 1.8rem;
+}
+body #itslike {
+  max-width: 72rem;
+  margin: 15rem auto 7.5rem;
+  padding: 0 1rem;
+  text-align: center;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  line-height: 1.1;
+  letter-spacing: -0.01rem;
+  font-size: 4.8rem;
+}
+body #itslike .what {
+  font-style: italic;
+}
+body .share {
+  max-width: 96rem;
+  margin: auto;
+  text-align: center;
+}
+body .share a,
+body .share button {
+  background-color: #FFF;
+  display: inline-block;
+  border: 0.4rem solid #000;
+  border-radius: 0.2rem;
+  padding: 1.8rem;
+  padding-right: 2.8rem;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 3.6rem;
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+}
+body .share .share-button:first-of-type {
+  margin-right: 3rem;
+}
+body #about {
+  max-width: 96rem;
+  margin: 15rem auto 0rem;
+  padding: 0 5rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 0.24rem;
+  text-transform: uppercase;
+  line-height: 1.35;
+  font-weight: 400;
+}
+body #about p {
+  margin-bottom: 1.8rem;
+}
+body #about a,
+body #about a:visited {
+  text-decoration: none;
+  color: #000;
+  border-bottom: 1px solid #000;
+  margin-bottom: 1rem;
+}
+body .overlay {
+  background-color: black;
+  opacity: 0.6;
+}
+body .modal {
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  max-height: 80%;
+  background-color: #FFF;
+  border: 0.3rem solid #000;
+  padding: 5rem;
+}
+body .modal p {
+  margin-bottom: 7.5rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 0.24rem;
+  text-transform: uppercase;
+  line-height: 1.35;
+  font-weight: 400;
+}
+body #close {
+  top: 8%;
+  right: 9%;
+  width: 3rem;
+  height: 3rem;
+  color: #000;
+  background-color: #FFF;
+  border-radius: 50%;
+  border: 0.3rem solid #000;
+  text-align: center;
+  line-height: 3rem;
+  cursor: pointer;
+  font-size: 16px;
+}
+body .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+body .modal {
+  position: fixed;
+  overflow-y: scroll;
+}
+body #close {
+  position: fixed;
+  z-index: 2;
+}
+body.modal-open {
+	overflow: hidden;
+	position: fixed;
+	width: 100%;
+}
+
+body .share-modal {
+	display: none;
+}
+
+body.modal-open .share-modal {
+	display: block;
+}
+
+@media screen and (max-width: 870px) {
+  body .share .share-button,
+  body .share .share-button:first-of-type {
+    max-width: 440px;
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 40%;
+  }
+  body .share .share-button {
+    max-width: 295px;
+  }
 }
